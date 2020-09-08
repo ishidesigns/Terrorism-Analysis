@@ -488,6 +488,7 @@ def set_city(state_value):
 
 # Flow of your Project
 def main():
+  print("Welcome")
   load_data()
   
   open_browser()
@@ -497,7 +498,7 @@ def main():
   app.title = "Terrorism Analysis with Insights"
   app.run_server() # debug=True
 
-  print("This would be executed only after the script is closed")
+  print("Thanks")
   df = None
   app = None
 

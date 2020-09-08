@@ -487,7 +487,7 @@ def set_city(state_value):
     return [{'label':m , 'value':m} for m in option]
 
 # Flow of your Project
-def main8():
+def main():
   load_data()
   
   open_browser()
@@ -503,5 +503,5 @@ def main8():
 
 
 if __name__ == '__main__':
-    main8()
+    main()
 

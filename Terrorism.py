@@ -417,31 +417,11 @@ def def_app_ui(Tabs, month_value, date_value,region_value,country_value,state_va
   [Input("month", "value")])
 
 def update_date(month):
-    date_list = [x for x in range(1, 32)]
-    day1 = False
-    day2 = False
-    day3 = False
-    
-    if month == []:
-        return []
-    else:
-        for num in month:
-            if num in [1,3,5,7,8,10,12]:
-                day1 = True
-        
-            elif num in [4,6,9,11]:
-                day2 = True
-        
-            elif num == 2:
-                day3 = True
-                
-        if day1 == True:
-            return [{"label":m, "value":m} for m in date_list]
-        elif day2 == True:
-            return [{"label":m, "value":m} for m in date_list[:-1]]
-        else:
-            return [{"label":m, "value":m} for m in date_list[:-2]]
-
+    option = []
+    if month:
+        option= [{"label":m, "value":m} for m in date_list]
+    return option
+  
 @app.callback([Output("region-dropdown", "value"),
                Output("region-dropdown", "disabled"),
                Output("country-dropdown", "value"),
